@@ -4,7 +4,7 @@ import { constNotes } from "./constants";
 import { nanoid } from "nanoid";
 
 const App = () => {
-  const [notes, setNotes] = useState(constNotes);
+  // const [notes, setNotes] = useState([constNotes]);
   const addNote = (text) => {
     const date = new Date();
     const newNote = {
@@ -12,8 +12,8 @@ const App = () => {
       text: text,
       date: date.toLocaleDateString(),
     };
-    const newNotes = [...notes, newNote];
-    setNotes(newNotes);
+    const newNotes = [...constNotes, newNote];
+    // setNotes(newNotes);
   };
 
   return (
